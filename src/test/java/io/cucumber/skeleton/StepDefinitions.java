@@ -12,10 +12,13 @@ public class StepDefinitions {
     }
 
     @When("I wait {int} hour")
-    public void iWaitHour(int arg0) {
+    public void iWaitHour(int hours) {
+        Table table = new Table();
+        table.place(hours);
     }
 
     @Then("my belly should growl")
     public void myBellyShouldGrowl() {
+        System.out.println("Growling");
     }
 }
